@@ -1,0 +1,400 @@
+Problem 1
+Midterm due Jul 7, 2020 18:30 CDT
+Completed
+Bookmark this page
+
+
+Problem 1-1
+1.0/1.0 point (graded)
+Suppose x = "pi" and y = "pie". The line of code x, y = y, x will swap the values of x and y, resulting in x = "pie" and y = "pi".
+
+
+True  CORRECT
+False
+
+Problem 1-2
+1.0/1.0 point (graded)
+Suppose x is an integer in the following code:
+def f(x):
+    while x > 3:
+        f(x+1)
+
+For any value of x, all calls to f are guaranteed to never terminate.
+
+True
+False CORRECT
+
+Problem 1-3
+1.0/1.0 point (graded)
+A Python program always executes every line of code written at least once.
+
+
+True
+False CORRECT
+
+
+Problem 1-4
+1.0/1.0 point (graded)
+Suppose you have two different functions that each assign a variable called x. Modifying x in one function means you always modify x in the other function for any x.
+
+
+True
+False  CORRECT
+
+Problem 1-5
+0.0/1.0 point (graded)
+The following code will enter an infinite loop for all values of i and j.
+
+while i >= 0:
+    while j >= 0:
+        print(i, j)
+
+True Incorrect
+False CORRECT
+
+
+Problem 1-6
+1.0/1.0 point (graded)
+It is always possible and feasible for a programmer to come up with test cases that run through every possible path in a program.
+
+
+True
+False CORRECT
+
+Problem 1-7
+1.0/1.0 point (graded)
+Assume f() is defined. In the statement a = f(), a is always a function.
+
+
+True
+False CORRECT
+
+Problem 1-8
+1.0/1.0 point (graded)
+A program that keeps running and does not stop is an example of a syntax error.
+
+
+True
+False CORRECT
+
+Problem 1-9
+1.0/1.0 point (graded)
+Consider the following function.
+def f(x):
+    a = []
+    while x > 0:
+        a.append(x)
+        f(x-1)
+
+A new object of type list is created for each recursive invocation of f.
+
+True CORRECT
+False
+
+Problem 1-10
+1.0/1.0 point (graded)
+A tuple can contain a list as an element.
+
+
+True CORRECT
+False
+
+Total: 9/10
+
+----------------------------------------------------------------
+
+Problem 2-1
+1.0/1.0 point (graded)
+Consider the statement: L = {'1':1, '2':2, '3':3}. Which is correct?
+
+
+L is a list
+L is immutable
+L contains 6 elements
+L has integer keys
+L maps strings to integers  CORRECT
+
+Problem 2-2
+0.0/1.0 point (graded)
+Assume a break statement is executed inside a loop and that the loop is inside a function. Which of the following is correct?
+
+
+The program might immediately terminate.
+The function might immediately terminate.
+The loop will always immediately terminate. INCORRECT
+All of the above.
+None of the above.
+incorrect
+
+Problem 2-3
+1.0/1.0 point (graded)
+In Python, which of the following is a mutable object?
+
+
+a string
+a tuple
+a list CORRECT
+all of the above
+none of the above
+
+Problem 2-4
+1.0/1.0 point (graded)
+Assume the statement s[1024] = 3 does not produce an error message. This implies:
+
+
+type(s) can be str
+type(s) can be tuple
+type(s) can be list CORRECT
+All of the above
+
+Problem 2-5
+0.0/1.0 point (graded)
+Consider the code:
+
+L = [1,2,3]
+d = {'a': 'b'}
+def f(x):
+    return 3
+Which of the following does NOT cause an exception to be thrown?
+
+
+print(L[3])
+print(d['b'])
+
+{for i in range(1000001, -1, -2):
+ print(f)}
+
+print(int('abc'))
+None of the above INCORRECT
+
+Problem 2-6
+0.0/3.0 points (graded)
+Examine the following code snippet:
+
+  stuff  = _____
+  for thing in stuff:
+        if thing == 'iQ':
+           print("Found it")
+Select all the values of the variable "stuff" that will make the code print "Found it".
+
+
+["iBoy", "iGirl", "iQ", "iC","iPaid","iPad"] INCORRECT
+("iBoy", "iGirl", "iQ", "iC","iPaid","iPad") INCORRECT
+[ ( "iBoy", "iGirl", "iQ", "iC","iPaid","iPad") ]
+( [ "iBoy", "iGirl", "iQ", "iC","iPaid","iPad" ], )
+["iQ"]
+"iQ"
+
+Problem 2-7
+2.0/2.0 points (graded)
+The following Python code is supposed to compute the square of an integer by using successive additions.
+
+def Square(x):
+    return SquareHelper(abs(x), abs(x))
+
+def SquareHelper(n, x):
+    if n == 0:
+        return 0
+    return SquareHelper(n-1, x) + x
+Not considering recursion depth limitations, what is wrong with this implementation of procedure Square? Check all that apply.
+
+
+It is going to return a wrong value.
+The term Square is a reserved Python keyword.
+Function names cannot start with a capital letter.
+The function is never going to return anything.
+Python has arbitrary precision arithmetic.
+This function will not work for negative numbers.
+The call SquareHelper(abs(x), abs(x)) won't work because you can't have abs(x) as both parameters.
+Nothing is wrong; the code is fine as-is. CORRECT
+
+TOTAL: 5/10 :( Missed 3 questions out of 7
+
+---------------------------------------------------------------------
+
+Problem 3
+Midterm due Jul 7, 2020 18:30 CDT
+Completed
+ Bookmark this page
+Problem 3
+10.0/10.0 points (graded)
+Write a Python function, twoQuadratics, that takes in two sets of coefficients and x-values and prints the sum of the results of evaluating two quadratic equations. It does not do anything else. That is, you should evaluate and print the result of the following equation:  𝑎1∗𝑥21+𝑏1∗𝑥1+𝑐1+𝑎2∗𝑥22+𝑏2∗𝑥2+𝑐2 
+You are given the following function, evalQuadratic
+
+def evalQuadratic(a, b, c, x):
+   '''
+   a, b, c: numerical values for the coefficients of a quadratic equation
+   x: numerical value at which to evaluate the quadratic.
+   '''
+   return a*x*x + b*x + c
+    
+Use the given function (you don't need to redefine evalQuadratic in this box; when you call evalQuadratic, our definition will be used).
+
+def twoQuadratics(a1, b1, c1, x1, a2, b2, c2, x2):
+    '''
+    a1, b1, c1: one set of coefficients of a quadratic equation
+    a2, b2, c2: another set of coefficients of a quadratic equation
+    x1, x2: values at which to evaluate the quadratics
+    '''
+  # Your code here  
+If you are getting this problem incorrect, re-read the problem statement carefully.
+
+def twoQuadratics(a1, b1, c1, x1, a2, b2, c2, x2):
+    '''
+    a1, b1, c1: one set of coefficients of a quadratic equation
+    a2, b2, c2: another set of coefficients of a quadratic equation
+    x1, x2: values at which to evaluate the quadratics
+    '''
+    # Your code here 
+    print(evalQuadratic(a2, b2, c2, x2) + evalQuadratic(a1, b1 ,c1, x1))
+           
+           
+Press ESC then TAB or click outside of the code editor to exit
+
+CORRECT
+
+Total 10/10
+
+---------------------------------------------------------------------
+Problem 4
+15.0/15.0 points (graded)
+Write a Python function that returns the sum of the pairwise products of listA and listB. You should assume that listA and listB have the same length and are two lists of integer numbers. For example, if listA = [1, 2, 3] and listB = [4, 5, 6], the dot product is 1*4 + 2*5 + 3*6, meaning your function should return: 32
+
+This function takes in two lists of numbers and returns a number.
+
+
+def dotProduct(listA, listB):
+    '''
+    listA: a list of numbers
+    listB: a list of numbers of the same length as listA
+    '''
+    # Your code here
+    total = 0
+    for i in range(0,len(listA)):
+        total+= listA[i] * listB[i]
+    return total
+
+TOTAL 15/15
+
+Problem 5
+Midterm due Jul 7, 2020 18:30 CDT
+Completed
+ Bookmark this page
+Problem 5
+20.0/20.0 points (graded)
+Write a Python function that returns a list of keys in aDict that map to integer values that are unique (i.e. values appear exactly once in aDict). The list of keys you return should be sorted in increasing order. (If aDict does not contain any unique values, you should return an empty list.)
+
+This function takes in a dictionary and returns a list.
+
+def uniqueValues(aDict):
+    '''
+    aDict: a dictionary
+    output: returns a list of dictionary keys with unique values
+    '''
+    value_ofList = []
+    key_Oflist = []
+
+    for i in aDict.values():
+        value_ofList.append(i)
+
+    for now,value in aDict.items():
+        if value_ofList.count(value) == 1:
+            key_Oflist.append(now)
+    return key_Oflist
+
+TOTAL: 20/20
+
+Problem 6
+Midterm due Jul 7, 2020 18:30 CDT
+Completed
+ Bookmark this page
+You will not be able to see the test cases for this question. This will test your ability to come up with your own test cases. 
+
+Problem 6
+20.0/20.0 points (graded)
+Write a function to flatten a list. 
+The list contains other lists, strings, or ints. 
+For example, [[1,'a',['cat'],2],[[[3]],'dog'],4,5] is flattened into [1,'a','cat',2,3,'dog',4,5] (order matters).
+# Paste your function here
+def flatten(aList):
+    new_flat = flatten
+    get_flatted = []
+    for i in aList:
+        if type(i) == type([]):
+            get_flatted.extend(new_flat(i))
+        else:
+            get_flatted.append(i)
+    return get_flatted
+
+Total: 20/20
+
+
+---------------------------------------------------------
+
+
+Problem 7
+Midterm due Jul 7, 2020 18:30 CDT
+Completed
+ Bookmark this page
+You will not be able to see the test cases for this question. This will test your ability to come up with your own test cases. 
+
+Problem 7
+20.0/20.0 points (graded)
+Write a Python function called satisfiesF that has the specification below. 
+Then make the function call run_satisfiesF(L, satisfiesF). 
+Your code should look like this: 
+def satisfiesF(L):
+    """
+    Assumes L is a list of strings
+    Assume function f is already defined for you and it maps a string to a Boolean
+    Mutates L such that it contains all of the strings, s, originally in L such
+            that f(s) returns True, and no other elements. Remaining elements in L
+            should be in the same order.
+    Returns the length of L after mutation
+    """
+    # Your function implementation here
+
+run_satisfiesF(L, satisfiesF)
+For your own testing of satisfiesF, for example, see the following test function f and test code:
+
+def f(s):
+    return 'a' in s
+      
+L = ['a', 'b', 'a']
+print(satisfiesF(L))
+print(L)
+Should print:
+
+2
+['a', 'a']
+Paste your entire function satisfiesF, including the definition, in the box below. After you define your function, make a function call to run_satisfiesF(L, satisfiesF). Do not define f or run_satisfiesF. Do not leave any debugging print statements.
+
+For this question, you will not be able to see the test cases we run. This problem will test your ability to come up with your own test cases.
+def satisfiesF(L):
+    """
+    Assumes L is a list of strings
+    Assume function f is already defined for you and it maps a string to a Boolean
+    Mutates L such that it contains all of the strings, s, originally in L such
+            that f(s) returns True, and no other elements
+    Returns the length of L after mutation
+    """
+    # Your function implementation here
+
+    # Create a copy of L to iterate over
+    newList = L[0:]
+
+  
+    for iterate in newList:
+        if f(iterate) == False:
+            L.remove(iterate)
+        else:
+            continue
+    return len(L)
+run_satisfiesF(L, satisfiesF)
+
+
+TOTAL: 20/20 
+
+
+MIDTERM TOTAL: 94/100 (94%)
+(94%) (94%) (94%) (94%) (94%)
